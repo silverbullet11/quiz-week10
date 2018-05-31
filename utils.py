@@ -79,12 +79,12 @@ def build_dataset(words, n_words):
         data.append(index)
     count[0][1] = unk_count
     reversed_dictionary = dict(zip(dictionary.values(), dictionary.keys()))
-    # 保存dictionary和reversed_dictionary
-    with open('dictionary.json', 'w') as output_dictionary:
-        json.dump(dictionary, output_dictionary)
-
-    with open('reverse_dictionary.json', 'w') as output_reversed_dict:
-        json.dump(reversed_dictionary, output_reversed_dict)
+    # # 保存dictionary和reversed_dictionary
+    # with open('dictionary.json', 'w') as output_dictionary:
+    #     json.dump(dictionary, output_dictionary)
+    #
+    # with open('reverse_dictionary.json', 'w') as output_reversed_dict:
+    #     json.dump(reversed_dictionary, output_reversed_dict)
     return data, count, dictionary, reversed_dictionary
 
 
