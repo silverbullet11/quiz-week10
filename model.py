@@ -48,14 +48,14 @@ class Model():
             if embedding_file:
                 # if embedding file provided, use it.
                 embedding = np.load(embedding_file)
-                embed = tf.constant(embedding, name='embedding')
+                self.embed = tf.constant(embedding, name='embedding')
             else:
                 # if not, initialize an embedding and train it.
-                embed = tf.get_variable(
+                self.embed = tf.get_variable(
                     'embedding', [self.num_words, self.dim_embedding])
-                tf.summary.histogram('embed', embed)
+                tf.summary.histogram('embed', self.embed)
 
-            data = tf.nn.embedding_lookup(embed, self.X)
+            data = tf.nn.embedding_lookup(self.embed, self.X)
 
         with tf.variable_scope('rnn'):
             ##################
