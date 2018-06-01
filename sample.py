@@ -78,5 +78,5 @@ with tf.Session() as sess:
             word = np.take(reverse_list, word_index)
             sentence = sentence + word
 
-        logging.debug('==============[{0}]=============='.format(title))
-        logging.debug(sentence)
+        logging.debug('==============[{0}]=============='.format(title.decode('utf-8')))
+        logging.debug(sentence.decode('utf-8'))
