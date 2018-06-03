@@ -1,4 +1,6 @@
 # 作业结果说明：
+（Tinymind运行结果：https://www.tinymind.com/executions/3ce57dzk ）
+
 1. 作业最终运行结果请参考 ![Results](Results.png)
 2. dictionary.json和reverse_dictionary.json是在Word Embedding阶段生成的。在对原文件进行处理的时候，把所有重复的换行符"\n"都进行了去重操作，以去除多余的空行。
 
